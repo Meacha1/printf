@@ -42,9 +42,9 @@ putchar(p[j]);
 }
 }
 }
-if (format[i] == '%')
+if (format[i] == '%' && format[i + 1] != '%') 
 continue;
-if (format[i - 1] == '%')
+if (format[i - 1] == '%' && format[i] != '%')
 continue;
 putchar(format[i]);
 va_end(args);
