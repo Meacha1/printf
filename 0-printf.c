@@ -25,7 +25,7 @@ if (format[i] == '%')
 if (format[i + 1] == 'c')
 {
 p = va_arg(args, char *);
-_putchar(p);
+putchar(p);
 }
 else if (format[i + 1] == 's')
 {
@@ -34,7 +34,7 @@ for (k = 0; p[k]; k++)
 ;
 for (j = 0; j < k; j++)
 {
-_putchar(p[j]);
+putchar(p[j]);
 }
 }
 }
@@ -42,7 +42,7 @@ if (format[i] == '%')
 continue;
 if (format[i - 1] == '%')
 continue;
-_putchar(format[i]);
+putchar(format[i]);
 
 va_end(args);
 return (0);
