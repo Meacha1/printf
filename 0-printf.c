@@ -14,6 +14,7 @@ int i = 0, j, k, count = 0;
 va_list args;
 
 char *p = NULL;
+char c;
 va_start(args, format);
 
 for (i = 0; format[i]; i++, count++)
@@ -24,8 +25,8 @@ if (format[i] == '%')
 {
 if (format[i + 1] == 'c')
 {
-p = va_arg(args, char *);
-putchar(p);
+c = va_arg(args, int);
+putchar(c);
 }
 else if (format[i + 1] == 's')
 {
@@ -45,5 +46,5 @@ continue;
 putchar(format[i]);
 
 va_end(args);
-return (0);
+return (count);
 }
