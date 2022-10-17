@@ -42,9 +42,9 @@ putchar(p[j]);
 }
 }
 }
-if (format[i] == '%' && format[i+1] != '%')
+if (format[i] == '%' && (format[i+1] == 's' || format[i+1] == 'c' || format[i+1] == 'd' || format[i+1] == 'p'))
 continue;
-if (format[i-1] == '%' && (format[i] == 's' || format[i] == 'c' || format[i] == 'd' || format[i] == 'p'))
+if (format[i-1] == '%' && (format[i] == 's' || format[i] == 'c' || format[i] == 'd' || format[i] == 'p' || format[i] == '%'))
 continue;
 putchar(format[i]);
 va_end(args);
