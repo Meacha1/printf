@@ -49,5 +49,6 @@ continue;
 putchar(format[i]);
 va_end(args);
 }
+putchat(10);
 return (count - count1 * 2 + count2);
 }
